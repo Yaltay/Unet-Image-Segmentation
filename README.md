@@ -1,21 +1,49 @@
-# Unet-Image-Segmentation
-This project performs image segmentation on the Carvana Image Masking Challenge dataset using the U-Net architecture. The model is trained with PyTorch.
+# 🚗 U-Net Image Segmentation — Carvana Masking Challenge
 
+A PyTorch implementation of the **U-Net** architecture for pixel-level image segmentation, trained on the [Carvana Image Masking Challenge](https://www.kaggle.com/c/carvana-image-masking-challenge) dataset to automatically separate cars from their backgrounds.
 
-🚀 Carvana Image Masking Challenge - U-Net Segmentation Project
-This project trains a U-Net model on the Carvana Image Masking Challenge dataset to perform image segmentation. The model is implemented and trained using PyTorch.
+## ✨ Features
 
-📌 Features
-✅ Segmentation model using U-Net architecture.
-✅ Dataset consists of car images from the Carvana challenge.
-✅ Model trained and evaluated with PyTorch.
-✅ Data augmentation techniques applied during training.
+- Full U-Net architecture implemented from scratch in PyTorch
+- Custom `Dataset` / `DataLoader` pipeline for the Carvana dataset
+- Data augmentation for improved generalization
+- Training and evaluation scripts with checkpointing
+- Saved prediction masks for visual inspection
 
-📊 Technologies Used
-Python
-PyTorch
-NumPy 
-Matplotlib
+## 🧰 Tech Stack
 
-📌 Detailed Explanation & Documentation
-A detailed documentation will be prepared soon, including the functions used, architecture details, and model implementation. Stay tuned! 🚀
+- Python
+- PyTorch
+- NumPy
+- Matplotlib
+
+## 📁 Project Structure
+
+```
+├── model.py            # U-Net architecture definition
+├── datasetLoad.py       # Dataset loading and preprocessing
+├── train.py             # Training loop
+├── train_test.py        # Training + evaluation utilities
+├── utils.py              # Helper functions (metrics, checkpoints, etc.)
+└── saved_images/         # Model output masks
+```
+
+## 🚀 Getting Started
+
+```bash
+pip install torch torchvision numpy matplotlib
+```
+
+```bash
+python train.py
+```
+
+Predicted segmentation masks will be saved to `saved_images/` during training/evaluation.
+
+## 📊 Dataset
+
+This project uses the [Carvana Image Masking Challenge](https://www.kaggle.com/c/carvana-image-masking-challenge) dataset — high-resolution car photos paired with binary masks isolating the vehicle from the background.
+
+## 📬 Contact
+
+Questions or suggestions? Reach out at **yaltay556@gmail.com**.
